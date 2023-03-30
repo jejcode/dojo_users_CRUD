@@ -13,9 +13,11 @@
         <table class="table table-hover">
             <thead class="thead-dark">
                 <tr>
-                    <th  class="text-warning" scope="col">ID</td>
-                    <th  class="text-warning" scope="col">Full Name</td>
-                    <th  class="text-warning" scope="col">Occupation</td>
+                    <th  class="text-warning" scope="col">ID</th>
+                    <th  class="text-warning" scope="col">Full Name</th>
+                    <th  class="text-warning" scope="col">Email</th>
+                    <th  class="text-warning" scope="col">Created On</th>
+                    <th  class="text-warning" scope="col">Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -24,6 +26,8 @@
                         <td>{{ user.id}}</td>
                         <td>{{ user.first_name}} {{ user.last_name }}</td>
                         <td>{{ user.email }}</td>
+                        <td>{{ user.created_at.strftime('%B %d, %Y') }}</td>
+                        <td><a href="/users/{{ user.id }}">Show</a> | <a href="/users/{{ user.id }}/edit">Edit</a> | <a href="/users/{{ user.id }}/delete">Delete</a></td>
                     </tr>
                 {% endfor %}
             </tbody>
