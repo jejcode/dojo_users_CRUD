@@ -5,6 +5,8 @@ Create an app that displays all records from a database table, with a route to a
 What I learned:
 More bootstrap formatting options
 Once the full folder structure is in place, import needs a path name. For example, to import a controlller class:
+
     from flask_app.controllers.users import User
+
 I forgot to pass the query string in my sql connection command, which caused a "slice" error.
 
